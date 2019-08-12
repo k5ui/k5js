@@ -88,9 +88,30 @@ exports.Post = {
   labelResolver: item => item.title,
   mutations: [
     {
+      schema: 'usersPosts(authors: [ID]!): [Post]',
+      resolver: async (obj, args, context, info, { query }) => {
+        // ... Some logic to determine the related items
+        const relatedIds = args.authors;
+
+        const { data: { allPosts } = {}, errors } = await query(
+          `
+            query getPosts($where: PostWhereInput!) {
+              allPosts(where: $where) {
+                id
+                title
+                posted
+              }
+            }
+          `,
+          { variables: { where: { author: { id_in: relatedIds } } } }
+        );
+        console.log(errors);
+        return allPosts;
+      }
+    },
+    {
       schema: 'relatedPosts: [Post]',
       resolver: async (obj, args, context, info, { query }) => {
-        console.log({ obj, args, context, info, query });
         // ... Some logic to determine the related items
         const { data: { allPosts } } = await query(
           `
