@@ -77,7 +77,7 @@ exports.Post = {
       options: [{ label: 'Draft', value: 'draft' }, { label: 'Published', value: 'published' }],
     },
     body: { type: Wysiwyg },
-    posted: { type: DateTime, format: 'DD/MM/YYYY' },
+    posted: { type: DateTime /*, format: 'DD/MM/YYYY'*/ },
     image: { type: File, adapter: fileAdapter },
   },
   adminConfig: {
@@ -86,6 +86,28 @@ exports.Post = {
     defaultSort: 'title',
   },
   labelResolver: item => item.title,
+  mutations: [
+    {
+      schema: 'relatedPosts: [Post]',
+      resolver: async (obj, args, context, info, { query }) => {
+        console.log({ obj, args, context, info, query });
+        // ... Some logic to determine the related items
+        const { data: { allPosts } } = await query(
+          `
+            query getPosts {
+              allPosts {
+                id
+                title
+                posted
+              }
+            }
+          `
+        );
+
+        return allPosts;
+      }
+    }
+  ],
 };
 
 exports.PostCategory = {
