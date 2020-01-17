@@ -49,7 +49,7 @@ export default class OEmbedField extends Component {
   };
 
   render() {
-    const { autoFocus, field, value = null, savedValue = null, errors } = this.props;
+    const { autoFocus, field, value = null, savedValue = null, errors, isReadOnly } = this.props;
     const htmlID = `ks-oembed-${field.path}`;
     const canRead = errors.every(
       error => !(error instanceof Error && error.name === 'AccessDeniedError')
@@ -72,6 +72,7 @@ export default class OEmbedField extends Component {
             placeholder={canRead ? undefined : error.message}
             onChange={this.onChange}
             id={htmlID}
+            disabled={isReadOnly}
           />
         </FieldInput>
         {value && value.originalUrl && hasChanged && (

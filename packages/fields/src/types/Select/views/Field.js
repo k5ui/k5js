@@ -11,7 +11,7 @@ export default class SelectField extends Component {
     this.props.onChange(option ? option.value : null);
   };
   render() {
-    const { autoFocus, field, value: serverValue, renderContext, errors } = this.props;
+    const { autoFocus, field, value: serverValue, renderContext, errors, isReadOnly } = this.props;
     const value = field.options.find(i => i.value === serverValue);
     const htmlID = `ks-input-${field.path}`;
     const canRead = errors.every(
@@ -45,6 +45,7 @@ export default class SelectField extends Component {
               id={`react-select-${htmlID}`}
               inputId={htmlID}
               instanceId={htmlID}
+              isDisabled={isReadOnly}
               {...selectProps}
             />
           </div>

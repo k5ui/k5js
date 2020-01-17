@@ -12,7 +12,7 @@ export default class TextField extends Component {
     this.props.onChange(event.target.checked);
   };
   render() {
-    const { autoFocus, field, value, errors } = this.props;
+    const { autoFocus, field, value, errors, isReadOnly } = this.props;
     const checked = value || false;
     const htmlID = `ks-input-${field.path}`;
 
@@ -26,6 +26,7 @@ export default class TextField extends Component {
             checked={checked}
             onChange={this.onChange}
             id={htmlID}
+            isDisabled={isReadOnly}
           />
         </FieldInput>
       </FieldContainer>

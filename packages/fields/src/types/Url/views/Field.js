@@ -11,7 +11,7 @@ export default class UrlField extends Component {
     this.props.onChange(event.target.value);
   };
   render() {
-    const { autoFocus, field, value: serverValue, errors } = this.props;
+    const { autoFocus, field, value: serverValue, errors, isReadOnly } = this.props;
     const value = serverValue || '';
     const htmlID = `ks-input-${field.path}`;
     const canRead = errors.every(
@@ -34,6 +34,7 @@ export default class UrlField extends Component {
             placeholder={canRead ? undefined : error.message}
             onChange={this.onChange}
             id={htmlID}
+            disabled={isReadOnly}
           />
         </FieldInput>
       </FieldContainer>

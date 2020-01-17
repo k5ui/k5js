@@ -11,7 +11,7 @@ export default class UuidField extends Component {
     this.props.onChange(event.target.value);
   };
   render() {
-    const { autoFocus, field, errors, value: serverValue } = this.props;
+    const { autoFocus, field, errors, value: serverValue, isReadOnly } = this.props;
     const value = serverValue || '';
     const htmlID = `ks-input-${field.path}`;
     const canRead = errors.every(
@@ -34,6 +34,7 @@ export default class UuidField extends Component {
             placeholder={canRead ? undefined : error.message}
             onChange={this.onChange}
             id={htmlID}
+            disabled={isReadOnly}
           />
         </FieldInput>
       </FieldContainer>

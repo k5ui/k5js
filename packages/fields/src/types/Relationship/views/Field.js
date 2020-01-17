@@ -103,9 +103,8 @@ function LinkToRelatedItems({ field, value }) {
   );
 }
 
-function CreateAndAddItem({ field, item, onCreate, CreateItemModal }) {
+function CreateAndAddItem({ field, item, onCreate, CreateItemModal, isDisabled }) {
   const { list, openCreateItemModal } = useList();
-
   let relatedList = field.adminMeta.getListByKey(field.config.ref);
   let label = `Create and add ${relatedList.singular}`;
 
@@ -144,6 +143,7 @@ function CreateAndAddItem({ field, item, onCreate, CreateItemModal }) {
               aria-label={label}
               variant="ghost"
               css={{ marginLeft: gridSize }}
+              isDisabled={isDisabled}
             />
           );
         }}
@@ -179,6 +179,7 @@ export default class RelationshipField extends Component {
       item,
       list,
       CreateItemModal,
+      isReadOnly,
     } = this.props;
     const { many, ref } = field.config;
     const { authStrategy } = field.adminMeta;
@@ -201,6 +202,7 @@ export default class RelationshipField extends Component {
               renderContext={renderContext}
               htmlID={htmlID}
               onChange={this.onChange}
+              isDisabled={isReadOnly}
             />
           </div>
           <ListProvider list={relatedList}>
@@ -212,6 +214,7 @@ export default class RelationshipField extends Component {
               item={item}
               list={list}
               CreateItemModal={CreateItemModal}
+              isDisabled={isReadOnly}
             />
           </ListProvider>
           {authStrategy && ref === authStrategy.listKey && (

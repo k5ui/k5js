@@ -44,7 +44,7 @@ export default class PasswordField extends Component {
     this.setState(state => ({ showInputValue: !state.showInputValue }));
   };
   render() {
-    const { isEditing, inputPassword, inputConfirm, showInputValue } = this.state;
+    const { isEditing, inputPassword, inputConfirm, showInputValue, isReadOnly } = this.state;
     const { autoFocus, field, value: serverValue, errors, warnings } = this.props;
     const value = serverValue || '';
     const htmlID = `ks-input-${field.path}`;
@@ -66,6 +66,7 @@ export default class PasswordField extends Component {
                 placeholder="New Password"
                 type={showInputValue ? 'text' : 'password'}
                 value={inputPassword}
+                disabled={isReadOnly}
               />
               <Input
                 autoComplete="off"
@@ -76,19 +77,26 @@ export default class PasswordField extends Component {
                 placeholder="Confirm Password"
                 type={showInputValue ? 'text' : 'password'}
                 value={inputConfirm}
+                disabled={isReadOnly}
               />
               <Button
                 isActive={showInputValue}
                 onClick={this.toggleMode}
                 title={showInputValue ? 'Hide Text' : 'Show Text'}
                 variant="ghost"
+                disabled={isReadOnly}
               >
                 <A11yText>{showInputValue ? 'Hide Text' : 'Show Text'}</A11yText>
                 <div css={{ width: 20 }}>{showInputValue ? <LockIcon /> : <EyeIcon />}</div>
               </Button>
             </FlexGroup>
           ) : (
-            <Button id={`${htmlID}-button`} onClick={this.toggleInterface} variant="ghost">
+            <Button
+              id={`${htmlID}-button`}
+              onClick={this.toggleInterface}
+              variant="ghost"
+              isDisabled={isReadOnly}
+            >
               {value ? 'Update Password' : 'Set Password'}
             </Button>
           )}

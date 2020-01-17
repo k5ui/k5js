@@ -22,7 +22,7 @@ export default class TextField extends Component {
   };
 
   render() {
-    const { autoFocus, field, value, errors } = this.props;
+    const { autoFocus, field, value, errors, isReadOnly } = this.props;
     const htmlID = `ks-input-${field.path}`;
 
     return (
@@ -37,6 +37,7 @@ export default class TextField extends Component {
             value={this.valueToString(value)}
             onChange={this.onChange}
             id={htmlID}
+            disabled={isReadOnly}
           />
         </FieldInput>
       </FieldContainer>
