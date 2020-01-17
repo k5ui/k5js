@@ -47,7 +47,7 @@ const Form = styled.form({
 
 const getValues = (fieldsObject, item) => mapKeys(fieldsObject, field => field.serialize(item));
 
-const CheckIsReadOnly = ({ maybeAccess, config }) => !maybeAccess.update || !!config.isReadOnly;
+const checkIsReadOnly = ({ maybeAccess, config }) => !maybeAccess.update || !!config.isReadOnly;
 
 // Memoizing allows us to reduce the calls to `.serialize` when data hasn't
 // changed.
@@ -286,7 +286,7 @@ const ItemDetails = withRouter(
                 <Render key={field.path}>
                   {() => {
                     const [Field] = field.adminMeta.readViews([field.views.Field]);
-                    const isReadOnly = CheckIsReadOnly(field);
+                    const isReadOnly = checkIsReadOnly(field);
                     let onChange = useCallback(
                       value => {
                         this.setState(({ item: itm }) => ({
