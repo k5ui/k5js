@@ -81,7 +81,7 @@ export default function MarkdownField({ field, errors, value, onChange, isReadOn
               icon={<tool.icon />}
               onClick={onClick}
               label={tool.label}
-              isDisabled={isReadOnly}
+              disabled={isReadOnly}
             />
           );
         })}
