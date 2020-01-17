@@ -14,7 +14,7 @@ export default class WysiwygField extends Component {
     }
   };
   render() {
-    const { autoFocus, field, errors, value: serverValue } = this.props;
+    const { autoFocus, field, errors, value: serverValue, isReadOnly } = this.props;
     const value = serverValue || '';
     const htmlID = `ks-input-${field.path}`;
     const accessError = errors.find(
@@ -27,7 +27,13 @@ export default class WysiwygField extends Component {
       <FieldContainer>
         <FieldLabel htmlFor={htmlID} field={field} errors={errors} />
         <div css={{ display: 'flex', flex: 1 }}>
-          <Editor value={value} onChange={this.onChange} id={htmlID} autoFocus={autoFocus} />
+          <Editor
+            value={value}
+            onChange={this.onChange}
+            id={htmlID}
+            autoFocus={autoFocus}
+            isDisabled={isReadOnly}
+          />
         </div>
       </FieldContainer>
     );
