@@ -47,6 +47,8 @@ const Form = styled.form({
 
 const getValues = (fieldsObject, item) => mapKeys(fieldsObject, field => field.serialize(item));
 
+const CheckIsReadOnly = ({ maybeAccess, config }) => !maybeAccess.update || !!config.isReadOnly;
+
 // Memoizing allows us to reduce the calls to `.serialize` when data hasn't
 // changed.
 const getInitialValues = memoizeOne(getValues);
@@ -55,9 +57,7 @@ const getCurrentValues = memoizeOne(getValues);
 const deserializeItem = memoizeOne((list, data) => list.deserializeItemData(data));
 
 const getRenderableFields = memoizeOne(list =>
-  list.fields
-    .filter(({ isPrimaryKey }) => !isPrimaryKey)
-    .filter(({ maybeAccess, config }) => !!maybeAccess.update || !!config.isReadOnly)
+  list.fields.filter(({ isPrimaryKey }) => !isPrimaryKey)
 );
 
 const ItemDetails = withRouter(
@@ -66,11 +66,7 @@ const ItemDetails = withRouter(
       super(props);
       // memoized function so we can call it multiple times _per component_
       this.getFieldsObject = memoizeOne(() =>
-        arrayToObject(
-          // NOTE: We _exclude_ read only fields
-          getRenderableFields(props.list).filter(({ config }) => !config.isReadOnly),
-          'path'
-        )
+        arrayToObject(getRenderableFields(props.list), 'path')
       );
     }
 
@@ -290,7 +286,7 @@ const ItemDetails = withRouter(
                 <Render key={field.path}>
                   {() => {
                     const [Field] = field.adminMeta.readViews([field.views.Field]);
-
+                    const isReadOnly = CheckIsReadOnly(field);
                     let onChange = useCallback(
                       value => {
                         this.setState(({ item: itm }) => ({
@@ -313,6 +309,7 @@ const ItemDetails = withRouter(
                           field={field}
                           list={list}
                           item={item}
+                          isReadOnly={isReadOnly}
                           errors={[
                             ...(itemErrors[field.path] ? [itemErrors[field.path]] : []),
                             ...(validationErrors[field.path] || []),
