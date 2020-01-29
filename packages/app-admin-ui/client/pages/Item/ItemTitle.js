@@ -2,12 +2,12 @@
 import { jsx } from '@emotion/core';
 import { memo } from 'react';
 
-import { ChevronLeftIcon, PlusIcon } from '@arch-ui/icons';
-import { FlexGroup } from '@arch-ui/layout';
-import { IconButton } from '@arch-ui/button';
-import { PageTitle } from '@arch-ui/typography';
-import Tooltip from '@arch-ui/tooltip';
-import { gridSize } from '@arch-ui/theme';
+import { ChevronLeftIcon, PlusIcon } from '@ksjs-ui/icons';
+import { FlexGroup } from '@ksjs-ui/layout';
+import { IconButton } from '@ksjs-ui/button';
+import { PageTitle } from '@ksjs-ui/typography';
+import Tooltip from '@ksjs-ui/tooltip';
+import { gridSize } from '@ksjs-ui/theme';
 
 import { IdCopy } from './IdCopy';
 import { Search } from './Search';

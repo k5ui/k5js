@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { RadioGroup, Radio } from '@arch-ui/filters';
+import { RadioGroup, Radio } from '@ksjs-ui/filters';
 
 export default class PasswordFilterView extends Component {
   handleChange = value => {

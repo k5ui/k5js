@@ -5,11 +5,11 @@ import { Component, Fragment } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 
-import { FieldContainer, FieldLabel, FieldDescription, FieldInput } from '@arch-ui/fields';
-import { PlusIcon, PersonIcon, LinkExternalIcon } from '@arch-ui/icons';
-import { gridSize } from '@arch-ui/theme';
-import { IconButton } from '@arch-ui/button';
-import Tooltip from '@arch-ui/tooltip';
+import { FieldContainer, FieldLabel, FieldDescription, FieldInput } from '@ksjs-ui/fields';
+import { PlusIcon, PersonIcon, LinkExternalIcon } from '@ksjs-ui/icons';
+import { gridSize } from '@ksjs-ui/theme';
+import { IconButton } from '@ksjs-ui/button';
+import Tooltip from '@ksjs-ui/tooltip';
 
 import RelationshipSelect from './RelationshipSelect';
 import { ListProvider, useList } from '@ksjs/app-admin-ui/components';

@@ -3,9 +3,9 @@
 import { jsx } from '@emotion/core';
 import { Component } from 'react';
 
-import { FieldContainer, FieldLabel, FieldDescription, FieldInput } from '@arch-ui/fields';
+import { FieldContainer, FieldLabel, FieldDescription, FieldInput } from '@ksjs-ui/fields';
 
-import { CheckboxPrimitive } from '@arch-ui/controls';
+import { CheckboxPrimitive } from '@ksjs-ui/controls';
 
 export default class TextField extends Component {
   onChange = event => {

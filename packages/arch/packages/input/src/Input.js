@@ -2,9 +2,9 @@
 import { jsx } from '@emotion/core';
 import { forwardRef } from 'react';
 
-import { uniformHeight } from '@arch-ui/common';
-import { colors } from '@arch-ui/theme';
-// import { alpha } from '@arch-ui/color-utils';
+import { uniformHeight } from '@ksjs-ui/common';
+import { colors } from '@ksjs-ui/theme';
+// import { alpha } from '@ksjs-ui/color-utils';
 
 // Basic Input
 // ------------------------------

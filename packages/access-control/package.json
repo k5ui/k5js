@@ -8,6 +8,6 @@
     "node": ">=8.4.0"
   },
   "dependencies": {
-    "@ksjs/utils": "^5.0.0"
+    "@ksjs/utils": "^1.0.0"
   }
 }

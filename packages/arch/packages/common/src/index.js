@@ -1,4 +1,4 @@
-import { borderRadius, gridSize } from '@arch-ui/theme';
+import { borderRadius, gridSize } from '@ksjs-ui/theme';
 
 export const uniformHeight = {
   appearance: 'none',

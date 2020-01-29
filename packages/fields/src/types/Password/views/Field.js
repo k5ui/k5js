@@ -3,13 +3,13 @@
 import { jsx } from '@emotion/core';
 import { Component, createRef } from 'react';
 
-import { FieldContainer, FieldLabel, FieldDescription, FieldInput } from '@arch-ui/fields';
-import { Alert } from '@arch-ui/alert';
-import { Input } from '@arch-ui/input';
-import { FlexGroup } from '@arch-ui/layout';
-import { Button } from '@arch-ui/button';
-import { EyeIcon, LockIcon } from '@arch-ui/icons';
-import { A11yText } from '@arch-ui/typography';
+import { FieldContainer, FieldLabel, FieldDescription, FieldInput } from '@ksjs-ui/fields';
+import { Alert } from '@ksjs-ui/alert';
+import { Input } from '@ksjs-ui/input';
+import { FlexGroup } from '@ksjs-ui/layout';
+import { Button } from '@ksjs-ui/button';
+import { EyeIcon, LockIcon } from '@ksjs-ui/icons';
+import { A11yText } from '@ksjs-ui/typography';
 
 export default class PasswordField extends Component {
   focusTarget = createRef();

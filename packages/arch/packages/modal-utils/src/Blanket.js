@@ -2,8 +2,8 @@
 
 import { jsx } from '@emotion/core';
 
-import { colors } from '@arch-ui/theme';
-import { alpha } from '@arch-ui/color-utils';
+import { colors } from '@ksjs-ui/theme';
+import { alpha } from '@ksjs-ui/color-utils';
 
 export const Blanket = ({ isTinted, isLight, ...props }) => {
   let bg = 'transparent';

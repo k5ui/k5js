@@ -9,11 +9,11 @@ import { useAdminMeta } from '../../providers/AdminMeta';
 
 import CreateItemModal from '../../components/CreateItemModal';
 
-import { PlusIcon } from '@arch-ui/icons';
-import { Card } from '@arch-ui/card';
-import { colors, gridSize } from '@arch-ui/theme';
-import { LoadingIndicator } from '@arch-ui/loading';
-import { A11yText } from '@arch-ui/typography';
+import { PlusIcon } from '@ksjs-ui/icons';
+import { Card } from '@ksjs-ui/card';
+import { colors, gridSize } from '@ksjs-ui/theme';
+import { LoadingIndicator } from '@ksjs-ui/loading';
+import { A11yText } from '@ksjs-ui/typography';
 
 export const HeaderInset = props => (
   <div css={{ paddingLeft: gridSize * 2, paddingRight: gridSize * 2 }} {...props} />

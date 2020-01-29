@@ -1,7 +1,7 @@
 {
-  "name": "@arch-ui/color-utils",
+  "name": "@ksjs-ui/color-utils",
   "description": "Color Utilities used throughout @arch-ui components & @keystonejs Admin UI.",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "author": "Jed Watson",
   "license": "MIT",
   "main": "dist/color-utils.cjs.js",

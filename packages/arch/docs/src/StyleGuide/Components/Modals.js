@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from 'react';
 import styled from '@emotion/styled';
 
-import { Button } from '@arch-ui/button';
-import { FlexGroup } from '@arch-ui/layout';
-import Dialog from '@arch-ui/dialog';
-import Dropdown from '@arch-ui/dropdown';
-import Popout from '@arch-ui/popout';
-import Tooltip from '@arch-ui/tooltip';
+import { Button } from '@ksjs-ui/button';
+import { FlexGroup } from '@ksjs-ui/layout';
+import Dialog from '@ksjs-ui/dialog';
+import Dropdown from '@ksjs-ui/dropdown';
+import Popout from '@ksjs-ui/popout';
+import Tooltip from '@ksjs-ui/tooltip';
 
 export default class ModalGuide extends Component {
   state = { dialogIsOpen: false };

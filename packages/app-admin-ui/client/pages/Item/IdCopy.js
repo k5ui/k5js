@@ -4,12 +4,12 @@ import { useCallback, memo, useState, useEffect } from 'react';
 
 import copyToClipboard from 'clipboard-copy';
 import Animation from '../../components/Animation';
-import { CheckIcon, ClippyIcon } from '@arch-ui/icons';
-import { FlexGroup } from '@arch-ui/layout';
-import { A11yText } from '@arch-ui/typography';
-import { colors } from '@arch-ui/theme';
-import { Button } from '@arch-ui/button';
-import Tooltip from '@arch-ui/tooltip';
+import { CheckIcon, ClippyIcon } from '@ksjs-ui/icons';
+import { FlexGroup } from '@ksjs-ui/layout';
+import { A11yText } from '@ksjs-ui/typography';
+import { colors } from '@ksjs-ui/theme';
+import { Button } from '@ksjs-ui/button';
+import Tooltip from '@ksjs-ui/tooltip';
 
 let CopyIcon = memo(function CopyIcon({ isCopied }) {
   return isCopied ? (

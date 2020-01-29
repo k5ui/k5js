@@ -2,9 +2,9 @@
 
 import { jsx } from '@emotion/core';
 
-import { Button } from '@arch-ui/button';
-import { InfoIcon } from '@arch-ui/icons';
-import { colors } from '@arch-ui/theme';
+import { Button } from '@ksjs-ui/button';
+import { InfoIcon } from '@ksjs-ui/icons';
+import { colors } from '@ksjs-ui/theme';
 
 import { useListPagination } from '../pages/List/dataHooks';
 

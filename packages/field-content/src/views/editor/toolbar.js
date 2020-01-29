@@ -5,9 +5,9 @@ import { createPortal } from 'react-dom';
 import { Popper } from 'react-popper';
 import { marks, markTypes } from './marks';
 import { ToolbarButton } from './toolbar-components';
-import { CircleSlashIcon } from '@arch-ui/icons';
-import { colors, gridSize } from '@arch-ui/theme';
-import { useMeasure } from '@arch-ui/hooks';
+import { CircleSlashIcon } from '@ksjs-ui/icons';
+import { colors, gridSize } from '@ksjs-ui/theme';
+import { useMeasure } from '@ksjs-ui/hooks';
 import { getSelectionReference } from './utils';
 import applyRef from 'apply-ref';
 

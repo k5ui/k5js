@@ -1,13 +1,13 @@
 {
-  "name": "@arch-ui/theme",
+  "name": "@ksjs-ui/theme",
   "description": "Common Theme as used throughout @arch-ui packages and @keystonejs Admin UI.",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "author": "Jed Watson",
   "license": "MIT",
   "main": "dist/theme.cjs.js",
   "dependencies": {
-    "@arch-ui/color-utils": "0.0.1",
-    "@babel/runtime": "^7.7.7"
+    "@babel/runtime": "^7.7.7",
+    "@ksjs-ui/color-utils": "^0.1.0"
   },
   "module": "dist/theme.esm.js"
 }

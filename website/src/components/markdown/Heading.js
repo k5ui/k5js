@@ -2,8 +2,8 @@
 
 import React from 'react'; // eslint-disable-line no-unused-vars
 import { jsx } from '@emotion/core';
-import { colors, gridSize } from '@arch-ui/theme';
-import { LinkIcon } from '@arch-ui/icons';
+import { colors, gridSize } from '@ksjs-ui/theme';
+import { LinkIcon } from '@ksjs-ui/icons';
 
 import { mq } from '../../utils/media';
 

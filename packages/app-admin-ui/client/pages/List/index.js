@@ -5,16 +5,16 @@ import { Fragment, useEffect, useRef, Suspense } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { useList } from '../../providers/List';
 
-import { IconButton } from '@arch-ui/button';
-import { PlusIcon } from '@arch-ui/icons';
-import { Container, FlexGroup } from '@arch-ui/layout';
-import { colors, gridSize } from '@arch-ui/theme';
-import { PageTitle } from '@arch-ui/typography';
-import { Button } from '@arch-ui/button';
-import { KebabHorizontalIcon } from '@arch-ui/icons';
-import Tooltip from '@arch-ui/tooltip';
+import { IconButton } from '@ksjs-ui/button';
+import { PlusIcon } from '@ksjs-ui/icons';
+import { Container, FlexGroup } from '@ksjs-ui/layout';
+import { colors, gridSize } from '@ksjs-ui/theme';
+import { PageTitle } from '@ksjs-ui/typography';
+import { Button } from '@ksjs-ui/button';
+import { KebabHorizontalIcon } from '@ksjs-ui/icons';
+import Tooltip from '@ksjs-ui/tooltip';
 import { applyRefs } from 'apply-ref';
-import { LoadingIndicator } from '@arch-ui/loading';
+import { LoadingIndicator } from '@ksjs-ui/loading';
 
 import CreateItemModal from '../../components/CreateItemModal';
 import DocTitle from '../../components/DocTitle';

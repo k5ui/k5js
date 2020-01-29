@@ -2,7 +2,7 @@
 
 import { Component } from 'react';
 import { jsx } from '@emotion/core';
-import { Options } from '@arch-ui/options';
+import { Options } from '@ksjs-ui/options';
 import { arrayToObject } from '@ksjs/utils';
 
 function isOptionSelected(opt, selected) {

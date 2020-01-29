@@ -3,14 +3,14 @@ import { jsx } from '@emotion/core';
 import { Component, createRef, Suspense } from 'react';
 import { Transition, TransitionGroup } from 'react-transition-group';
 
-import { ChevronLeftIcon, ChevronRightIcon, AlertIcon } from '@arch-ui/icons';
-import { colors, gridSize } from '@arch-ui/theme';
-import { A11yText } from '@arch-ui/typography';
-import { Alert } from '@arch-ui/alert';
-import { Button } from '@arch-ui/button';
-import { OptionPrimitive } from '@arch-ui/options';
-import Select from '@arch-ui/select';
-import { LoadingSpinner } from '@arch-ui/loading';
+import { ChevronLeftIcon, ChevronRightIcon, AlertIcon } from '@ksjs-ui/icons';
+import { colors, gridSize } from '@ksjs-ui/theme';
+import { A11yText } from '@ksjs-ui/typography';
+import { Alert } from '@ksjs-ui/alert';
+import { Button } from '@ksjs-ui/button';
+import { OptionPrimitive } from '@ksjs-ui/options';
+import Select from '@ksjs-ui/select';
+import { LoadingSpinner } from '@ksjs-ui/loading';
 
 import FieldSelect from '../FieldSelect';
 import PopoutForm from './PopoutForm';

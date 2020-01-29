@@ -3,10 +3,10 @@
 import { jsx } from '@emotion/core';
 import { useMemo, useRef } from 'react';
 import styled from '@emotion/styled';
-import { CheckMark, OptionPrimitive, Options } from '@arch-ui/options';
-import { colors } from '@arch-ui/theme';
-import { Kbd } from '@arch-ui/typography';
-import { Button } from '@arch-ui/button';
+import { CheckMark, OptionPrimitive, Options } from '@ksjs-ui/options';
+import { colors } from '@ksjs-ui/theme';
+import { Kbd } from '@ksjs-ui/typography';
+import { Button } from '@ksjs-ui/button';
 
 import { DisclosureArrow, Popout, POPOUT_GUTTER } from '../../components/Popout';
 import { useList, useListSort, useKeyDown } from './dataHooks';

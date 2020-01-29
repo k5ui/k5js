@@ -8,10 +8,10 @@
     "node": ">=8.4.0"
   },
   "dependencies": {
-    "@ksjs/app-graphql-playground": "^5.0.0",
-    "@ksjs/logger": "^5.0.0",
-    "@ksjs/session": "^5.0.0",
-    "@ksjs/utils": "^5.1.1",
+    "@ksjs/app-graphql-playground": "^1.0.0",
+    "@ksjs/logger": "^1.0.0",
+    "@ksjs/session": "^1.0.0",
+    "@ksjs/utils": "^1.0.0",
     "apollo-errors": "^1.9.0",
     "apollo-server-express": "^2.9.1",
     "cuid": "^2.1.6",

@@ -2,8 +2,8 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/core';
 
-import { colors } from '@arch-ui/theme';
-import { A11yText } from '@arch-ui/typography';
+import { colors } from '@ksjs-ui/theme';
+import { A11yText } from '@ksjs-ui/typography';
 
 // ==============================
 // Dots

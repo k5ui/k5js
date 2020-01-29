@@ -2,8 +2,8 @@
 
 import { jsx } from '@emotion/core';
 
-import { FieldContainer, FieldLabel, FieldDescription, FieldInput } from '@arch-ui/fields';
-import { TextDayTimePicker } from '@arch-ui/day-picker';
+import { FieldContainer, FieldLabel, FieldDescription, FieldInput } from '@ksjs-ui/fields';
+import { TextDayTimePicker } from '@ksjs-ui/day-picker';
 
 const DateTimeField = ({ autoFocus, field, onChange, value, errors }) => {
   const htmlID = `ks-input-${field.path}`;

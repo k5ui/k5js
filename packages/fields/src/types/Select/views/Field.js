@@ -3,8 +3,8 @@
 import { jsx } from '@emotion/core';
 import { Component } from 'react';
 
-import { FieldContainer, FieldLabel, FieldDescription, FieldInput } from '@arch-ui/fields';
-import Select from '@arch-ui/select';
+import { FieldContainer, FieldLabel, FieldDescription, FieldInput } from '@ksjs-ui/fields';
+import Select from '@ksjs-ui/select';
 
 export default class SelectField extends Component {
   onChange = option => {

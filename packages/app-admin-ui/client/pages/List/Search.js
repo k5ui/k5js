@@ -4,12 +4,12 @@ import { jsx } from '@emotion/core';
 import { useRef, forwardRef, useState, useCallback } from 'react';
 import debounce from 'lodash.debounce';
 
-import { SearchIcon, XIcon } from '@arch-ui/icons';
-// import { Input } from '@arch-ui/input';
-import { A11yText } from '@arch-ui/typography';
-import { LoadingSpinner } from '@arch-ui/loading';
-import { colors } from '@arch-ui/theme';
-import { uniformHeight } from '@arch-ui/common';
+import { SearchIcon, XIcon } from '@ksjs-ui/icons';
+// import { Input } from '@ksjs-ui/input';
+import { A11yText } from '@ksjs-ui/typography';
+import { LoadingSpinner } from '@ksjs-ui/loading';
+import { colors } from '@ksjs-ui/theme';
+import { uniformHeight } from '@ksjs-ui/common';
 
 import { useListSearch } from './dataHooks';
 import { elementOffsetStyles } from './Filters/ActiveFilters';

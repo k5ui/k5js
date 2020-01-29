@@ -12,10 +12,10 @@ import {
   slideInHorizontal,
   withTransitionState,
   generateUEID,
-} from '@arch-ui/modal-utils';
-import { borderRadius, colors, gridSize, shadows } from '@arch-ui/theme';
-import { alpha } from '@arch-ui/color-utils';
-import { A11yText, Title } from '@arch-ui/typography';
+} from '@ksjs-ui/modal-utils';
+import { borderRadius, colors, gridSize, shadows } from '@ksjs-ui/theme';
+import { alpha } from '@ksjs-ui/color-utils';
+import { A11yText, Title } from '@ksjs-ui/typography';
 import { useStackIndex } from './stacks';
 
 const innerGutter = gridSize * 2;

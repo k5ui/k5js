@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
 import styled from '@emotion/styled';
 
-import { Button } from '@arch-ui/button';
-import PopoutModal from '@arch-ui/popout';
-import { colors, gridSize } from '@arch-ui/theme';
-import { alpha } from '@arch-ui/color-utils';
+import { Button } from '@ksjs-ui/button';
+import PopoutModal from '@ksjs-ui/popout';
+import { colors, gridSize } from '@ksjs-ui/theme';
+import { alpha } from '@ksjs-ui/color-utils';
 
 export const POPOUT_GUTTER = gridSize * 2;
 

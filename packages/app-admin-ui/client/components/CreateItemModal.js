@@ -4,11 +4,11 @@ import { Fragment, useCallback, useMemo, Suspense, useState, useRef, useEffect }
 import { useMutation } from '@apollo/react-hooks';
 import { useToasts } from 'react-toast-notifications';
 
-import { Button, LoadingButton } from '@arch-ui/button';
-import Drawer from '@arch-ui/drawer';
+import { Button, LoadingButton } from '@ksjs-ui/button';
+import Drawer from '@ksjs-ui/drawer';
 import { arrayToObject, captureSuspensePromises, countArrays } from '@ksjs/utils';
-import { gridSize } from '@arch-ui/theme';
-import { AutocompleteCaptor } from '@arch-ui/input';
+import { gridSize } from '@ksjs-ui/theme';
+import { AutocompleteCaptor } from '@ksjs-ui/input';
 
 import PageLoading from './PageLoading';
 import { useList } from '../providers/List';

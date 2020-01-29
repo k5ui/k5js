@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.7.7",
-    "@ksjs/adapter-knex": "^6.1.3",
-    "@ksjs/fields": "^6.0.5"
+    "@ksjs/adapter-knex": "^1.0.0",
+    "@ksjs/fields": "^1.0.0"
   },
   "main": "dist/fields-auto-increment.cjs.js",
   "module": "dist/fields-auto-increment.esm.js"

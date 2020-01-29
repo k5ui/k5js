@@ -3,9 +3,9 @@
 import { jsx } from '@emotion/core';
 import { Component } from 'react';
 
-import { FieldContainer, FieldLabel, FieldDescription, FieldInput } from '@arch-ui/fields';
-import { Input } from '@arch-ui/input';
-import { borderRadius, colors, gridSize } from '@arch-ui/theme';
+import { FieldContainer, FieldLabel, FieldDescription, FieldInput } from '@ksjs-ui/fields';
+import { Input } from '@ksjs-ui/input';
+import { borderRadius, colors, gridSize } from '@ksjs-ui/theme';
 
 import Preview from './preview';
 

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { LoadingIndicator } from '@arch-ui/loading';
+import { LoadingIndicator } from '@ksjs-ui/loading';
 
 export default function PageLoading() {
   return (

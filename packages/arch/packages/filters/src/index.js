@@ -8,9 +8,9 @@ import {
   Radio as _Radio,
 } from 'react-radios';
 
-import { colors } from '@arch-ui/theme';
-import { CheckboxPrimitive, RadioPrimitive } from '@arch-ui/controls';
-import { FlexGroup } from '@arch-ui/layout';
+import { colors } from '@ksjs-ui/theme';
+import { CheckboxPrimitive, RadioPrimitive } from '@ksjs-ui/controls';
+import { FlexGroup } from '@ksjs-ui/layout';
 
 const ControlLabel = ({ isChecked, isDisabled, ...props }) => {
   const type = Children.toArray(props.children)[0].props.type;

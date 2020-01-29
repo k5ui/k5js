@@ -4,9 +4,9 @@
 import { Fragment } from 'react';
 import { jsx } from '@emotion/core';
 
-import { TerminalIcon, MarkGithubIcon, SignOutIcon } from '@arch-ui/icons';
-import { NavIcon, NavGroupIcons } from '@arch-ui/navbar';
-import { A11yText } from '@arch-ui/typography';
+import { TerminalIcon, MarkGithubIcon, SignOutIcon } from '@ksjs-ui/icons';
+import { NavIcon, NavGroupIcons } from '@ksjs-ui/navbar';
+import { A11yText } from '@ksjs-ui/typography';
 import { useAdminMeta } from '../../providers/AdminMeta';
 
 const GITHUB_PROJECT = 'https://github.com/keystonejs/keystone-5';

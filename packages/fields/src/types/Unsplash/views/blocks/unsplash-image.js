@@ -3,7 +3,7 @@ import { jsx } from '@emotion/core';
 import { Fragment, useState, useCallback, createContext, useContext } from 'react';
 import pluralize from 'pluralize';
 import { BlockMenuItem } from '@ksjs/field-content/block-components';
-import { Input } from '@arch-ui/input';
+import { Input } from '@ksjs-ui/input';
 
 export let type = 'unsplashImage';
 

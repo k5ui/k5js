@@ -3,11 +3,11 @@ import { jsx } from '@emotion/core';
 import { Link } from 'gatsby';
 import { Match } from '@reach/router';
 
-import { Container, FlexGroup } from '@arch-ui/layout';
-import { SecondaryNav, SecondaryNavItem } from '@arch-ui/navbar';
-import { H1 } from '@arch-ui/typography';
+import { Container, FlexGroup } from '@ksjs-ui/layout';
+import { SecondaryNav, SecondaryNavItem } from '@ksjs-ui/navbar';
+import { H1 } from '@ksjs-ui/typography';
 import { Global } from '@emotion/core';
-import { globalStyles } from '@arch-ui/theme';
+import { globalStyles } from '@ksjs-ui/theme';
 
 const pages = {
   '/': 'Components',

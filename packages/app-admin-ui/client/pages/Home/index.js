@@ -2,8 +2,8 @@ import React, { Component, Fragment } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
 
-import { Container, Grid, Cell } from '@arch-ui/layout';
-import { PageTitle } from '@arch-ui/typography';
+import { Container, Grid, Cell } from '@ksjs-ui/layout';
+import { PageTitle } from '@ksjs-ui/typography';
 
 import { ListProvider } from '../../providers/List';
 import DocTitle from '../../components/DocTitle';

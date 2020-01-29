@@ -2,9 +2,9 @@
 
 import { jsx } from '@emotion/core';
 
-import { FieldContainer, FieldLabel, FieldDescription, FieldInput } from '@arch-ui/fields';
-import { TextDayPicker } from '@arch-ui/day-picker';
-import { Alert } from '@arch-ui/alert';
+import { FieldContainer, FieldLabel, FieldDescription, FieldInput } from '@ksjs-ui/fields';
+import { TextDayPicker } from '@ksjs-ui/day-picker';
+import { Alert } from '@ksjs-ui/alert';
 
 const CalendarDayField = ({ autoFocus, field, value, errors, onChange }) => {
   const htmlID = `ks-daypicker-${field.path}`;

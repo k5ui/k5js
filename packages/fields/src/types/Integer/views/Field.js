@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import { FieldContainer, FieldLabel, FieldDescription, FieldInput } from '@arch-ui/fields';
-import { Input } from '@arch-ui/input';
+import { FieldContainer, FieldLabel, FieldDescription, FieldInput } from '@ksjs-ui/fields';
+import { Input } from '@ksjs-ui/input';
 
 export default class TextField extends Component {
   onChange = event => {

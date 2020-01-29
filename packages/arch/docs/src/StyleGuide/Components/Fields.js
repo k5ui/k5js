@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
 
-import { FieldContainer, FieldLabel, FieldInput } from '@arch-ui/fields';
-import { Checkbox, CheckboxGroup, RadioGroup, Radio } from '@arch-ui/controls';
-import { Input } from '@arch-ui/input';
-import Select from '@arch-ui/select';
-import { FlexGroup } from '@arch-ui/layout';
+import { FieldContainer, FieldLabel, FieldInput } from '@ksjs-ui/fields';
+import { Checkbox, CheckboxGroup, RadioGroup, Radio } from '@ksjs-ui/controls';
+import { Input } from '@ksjs-ui/input';
+import Select from '@ksjs-ui/select';
+import { FlexGroup } from '@ksjs-ui/layout';
 
 const FieldGuide = () => (
   <Fragment>

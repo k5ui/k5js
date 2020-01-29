@@ -4,13 +4,13 @@ import { jsx } from '@emotion/core';
 import { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { FieldContainer, FieldLabel, FieldDescription, FieldInput } from '@arch-ui/fields';
-import { AlertIcon } from '@arch-ui/icons';
-import { HiddenInput } from '@arch-ui/input';
-import { Lozenge } from '@arch-ui/lozenge';
-import { Button, LoadingButton } from '@arch-ui/button';
-import { FlexGroup } from '@arch-ui/layout';
-import { borderRadius, colors, gridSize } from '@arch-ui/theme';
+import { FieldContainer, FieldLabel, FieldDescription, FieldInput } from '@ksjs-ui/fields';
+import { AlertIcon } from '@ksjs-ui/icons';
+import { HiddenInput } from '@ksjs-ui/input';
+import { Lozenge } from '@ksjs-ui/lozenge';
+import { Button, LoadingButton } from '@ksjs-ui/button';
+import { FlexGroup } from '@ksjs-ui/layout';
+import { borderRadius, colors, gridSize } from '@ksjs-ui/theme';
 
 function uploadButtonLabelFn({ status }) {
   return status === 'empty' ? 'Upload Image' : 'Change Image';

@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 
-import { StopIcon } from '@arch-ui/icons';
-import { colors } from '@arch-ui/theme';
-import { Container } from '@arch-ui/layout';
+import { StopIcon } from '@ksjs-ui/icons';
+import { colors } from '@ksjs-ui/theme';
+import { Container } from '@ksjs-ui/layout';
 
 export default function PageError({ children, Icon, ...props }) {
   return (

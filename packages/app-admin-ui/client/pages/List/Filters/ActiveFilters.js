@@ -2,9 +2,9 @@
 
 import { Fragment } from 'react';
 import { jsx } from '@emotion/core';
-import { Pill } from '@arch-ui/pill';
-import { Button } from '@arch-ui/button';
-import { gridSize } from '@arch-ui/theme';
+import { Pill } from '@ksjs-ui/pill';
+import { Button } from '@ksjs-ui/button';
+import { gridSize } from '@ksjs-ui/theme';
 
 import EditFilterPopout from './EditFilterPopout';
 import AddFilterPopout from './AddFilterPopout';

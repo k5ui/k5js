@@ -3,10 +3,10 @@
 import { jsx } from '@emotion/core';
 import { Component } from 'react';
 
-import { colors, gridSize } from '@arch-ui/theme';
-import { ShieldIcon } from '@arch-ui/icons';
+import { colors, gridSize } from '@ksjs-ui/theme';
+import { ShieldIcon } from '@ksjs-ui/icons';
 
-import { FieldContainer, FieldDescription } from '@arch-ui/fields';
+import { FieldContainer, FieldDescription } from '@ksjs-ui/fields';
 import PrettyData from '../prettyData';
 
 export const FieldLabel = props => {

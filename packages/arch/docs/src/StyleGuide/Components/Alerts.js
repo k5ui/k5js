@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 
-import { Alert } from '@arch-ui/alert';
-import { FlexGroup } from '@arch-ui/layout';
+import { Alert } from '@ksjs-ui/alert';
+import { FlexGroup } from '@ksjs-ui/layout';
 
 const AlertGuide = () => (
   <Fragment>

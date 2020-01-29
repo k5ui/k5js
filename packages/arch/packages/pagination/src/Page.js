@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button } from '@arch-ui/button';
+import { Button } from '@ksjs-ui/button';
 
 const Page = props => {
   const handleClick = () => {

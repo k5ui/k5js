@@ -7,11 +7,11 @@ import { withRouter } from 'react-router-dom';
 import { useToasts } from 'react-toast-notifications';
 import memoizeOne from 'memoize-one';
 
-import { Container } from '@arch-ui/layout';
-import { Button } from '@arch-ui/button';
-import { AutocompleteCaptor } from '@arch-ui/input';
-import { Card } from '@arch-ui/card';
-import { gridSize } from '@arch-ui/theme';
+import { Container } from '@ksjs-ui/layout';
+import { Button } from '@ksjs-ui/button';
+import { AutocompleteCaptor } from '@ksjs-ui/input';
+import { Card } from '@ksjs-ui/card';
+import { gridSize } from '@ksjs-ui/theme';
 import {
   mapKeys,
   arrayToObject,

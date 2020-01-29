@@ -6,8 +6,8 @@ import {
   FieldDescription,
   FieldInput,
   Currency,
-} from '@arch-ui/fields';
-import { Input } from '@arch-ui/input';
+} from '@ksjs-ui/fields';
+import { Input } from '@ksjs-ui/input';
 
 export default class TextField extends Component {
   onChange = event => {

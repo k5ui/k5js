@@ -2,10 +2,10 @@
 
 import { jsx } from '@emotion/core';
 import { Component, Fragment } from 'react';
-import Select from '@arch-ui/select';
-import { CheckMark, Options, OptionPrimitive } from '@arch-ui/options';
-import { Radio, RadioGroup } from '@arch-ui/filters';
-import { gridSize } from '@arch-ui/theme';
+import Select from '@ksjs-ui/select';
+import { CheckMark, Options, OptionPrimitive } from '@ksjs-ui/options';
+import { Radio, RadioGroup } from '@ksjs-ui/filters';
+import { gridSize } from '@ksjs-ui/theme';
 
 const EventCatcher = props => (
   <div
