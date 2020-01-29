@@ -1,8 +1,8 @@
 import parse from 'date-fns/parse';
 import format from 'date-fns/format';
 import { Implementation } from '../../Implementation';
-import { MongooseFieldAdapter } from '@keystonejs/adapter-mongoose';
-import { KnexFieldAdapter } from '@keystonejs/adapter-knex';
+import { MongooseFieldAdapter } from '@ksjs/adapter-mongoose';
+import { KnexFieldAdapter } from '@ksjs/adapter-knex';
 
 export class CalendarDay extends Implementation {
   constructor(

@@ -16,19 +16,19 @@ const {
   unique,
   filterValues,
   compose,
-} = require('@keystonejs/utils');
+} = require('@ksjs/utils');
 const {
   validateFieldAccessControl,
   validateListAccessControl,
   validateCustomAccessControl,
   parseCustomAccess,
-} = require('@keystonejs/access-control');
+} = require('@ksjs/access-control');
 const {
   startAuthedSession,
   endAuthedSession,
   commonSessionMiddleware,
-} = require('@keystonejs/session');
-const { logger } = require('@keystonejs/logger');
+} = require('@ksjs/session');
+const { logger } = require('@ksjs/logger');
 
 const {
   unmergeRelationships,
@@ -244,7 +244,7 @@ module.exports = class Keystone {
       if (!graphQLQuery) {
         return Promise.reject(
           new Error(
-            `No executable schema named '${passThroughContext.schemaName}' is available. Have you setup '@keystonejs/app-graphql'?`
+            `No executable schema named '${passThroughContext.schemaName}' is available. Have you setup '@ksjs/app-graphql'?`
           )
         );
       }

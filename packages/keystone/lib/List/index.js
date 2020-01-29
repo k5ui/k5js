@@ -12,9 +12,9 @@ const {
   flatten,
   zipObj,
   createLazyDeferred,
-} = require('@keystonejs/utils');
-const { parseListAccess } = require('@keystonejs/access-control');
-const { logger } = require('@keystonejs/logger');
+} = require('@ksjs/utils');
+const { parseListAccess } = require('@ksjs/access-control');
+const { logger } = require('@ksjs/logger');
 
 const graphqlLogger = logger('graphql');
 const keystoneLogger = logger('keystone');
@@ -62,7 +62,7 @@ const opToType = {
 const getAuthMutationName = (prefix, authType) => `${prefix}With${upcase(authType)}`;
 
 const mapNativeTypeToKeystoneType = (type, listKey, fieldPath) => {
-  const { Text, Checkbox, Float } = require('@keystonejs/fields');
+  const { Text, Checkbox, Float } = require('@ksjs/fields');
 
   const nativeTypeMap = new Map([
     [
@@ -1428,7 +1428,7 @@ module.exports = class List {
   }
 
   async _nestedMutation(mutationState, context, mutation) {
-    const { Relationship } = require('@keystonejs/fields');
+    const { Relationship } = require('@ksjs/fields');
     // Set up a fresh mutation state if we're the root mutation
     const isRootMutation = !mutationState;
     if (isRootMutation) {

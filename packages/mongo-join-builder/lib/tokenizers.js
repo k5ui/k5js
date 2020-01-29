@@ -1,4 +1,4 @@
-const { objMerge, getType, escapeRegExp } = require('@keystonejs/utils');
+const { objMerge, getType, escapeRegExp } = require('@ksjs/utils');
 
 const getRelatedListAdapterFromQueryPath = (listAdapter, queryPath) => {
   if (!listAdapter) {

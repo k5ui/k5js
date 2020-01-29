@@ -1,6 +1,6 @@
-import { Implementation } from '@keystonejs/fields';
-import { MongooseFieldAdapter } from '@keystonejs/adapter-mongoose';
-import { KnexFieldAdapter } from '@keystonejs/adapter-knex';
+import { Implementation } from '@ksjs/fields';
+import { MongooseFieldAdapter } from '@ksjs/adapter-mongoose';
+import { KnexFieldAdapter } from '@ksjs/adapter-knex';
 
 export class MongoIdImplementation extends Implementation {
   gqlOutputFields() {

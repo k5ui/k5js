@@ -1,9 +1,9 @@
-const { Keystone } = require('@keystonejs/keystone');
-const { PasswordAuthStrategy } = require('@keystonejs/auth-password');
-const { Text, Password, Select } = require('@keystonejs/fields');
-const { GraphQLApp } = require('@keystonejs/app-graphql');
-const { AdminUIApp } = require('@keystonejs/app-admin-ui');
-const { objMerge } = require('@keystonejs/utils');
+const { Keystone } = require('@ksjs/keystone');
+const { PasswordAuthStrategy } = require('@ksjs/auth-password');
+const { Text, Password, Select } = require('@ksjs/fields');
+const { GraphQLApp } = require('@ksjs/app-graphql');
+const { AdminUIApp } = require('@ksjs/app-admin-ui');
+const { objMerge } = require('@ksjs/utils');
 const {
   getStaticListName,
   getImperativeListName,
@@ -15,7 +15,7 @@ const {
 
 const { projectName } = require('./config');
 
-const { MongooseAdapter } = require('@keystonejs/adapter-mongoose');
+const { MongooseAdapter } = require('@ksjs/adapter-mongoose');
 
 const keystone = new Keystone({
   name: projectName,

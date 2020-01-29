@@ -1,6 +1,6 @@
 const cuid = require('cuid');
-const { Text, Relationship } = require('@keystonejs/fields');
-const { setupServer, graphqlRequest } = require('@keystonejs/test-utils');
+const { Text, Relationship } = require('@ksjs/fields');
+const { setupServer, graphqlRequest } = require('@ksjs/test-utils');
 const { FixtureGroup, timeQuery, populate, range } = require('../lib/utils');
 
 function setupKeystone(adapterName) {

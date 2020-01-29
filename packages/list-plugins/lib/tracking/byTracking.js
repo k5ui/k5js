@@ -1,4 +1,4 @@
-const { Relationship } = require('@keystonejs/fields');
+const { Relationship } = require('@ksjs/fields');
 const { composeResolveInput } = require('../utils');
 
 const _byTracking = ({ created = true, updated = true }) => ({

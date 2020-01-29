@@ -1,5 +1,5 @@
 import { Virtual, MongoVirtualInterface, KnexVirtualInterface } from './Implementation';
-import { importView } from '@keystonejs/build-field-types';
+import { importView } from '@ksjs/build-field-types';
 
 export default {
   type: 'Virtual',

@@ -1,4 +1,4 @@
-import FieldController from '@keystonejs/fields/Controller';
+import FieldController from '@ksjs/fields/Controller';
 
 export default class TextController extends FieldController {
   getFilterGraphQL = ({ type, value }) => {

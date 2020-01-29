@@ -1,7 +1,7 @@
 import { dirname } from 'path';
 import express from 'express';
-import { Text } from '@keystonejs/fields';
-import { importView } from '@keystonejs/build-field-types';
+import { Text } from '@ksjs/fields';
+import { importView } from '@ksjs/build-field-types';
 
 function prepareMiddleware() {
   const tinymcePath = dirname(require.resolve('tinymce'));

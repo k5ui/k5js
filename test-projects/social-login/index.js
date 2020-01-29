@@ -1,5 +1,5 @@
-const { Keystone } = require('@keystonejs/keystone');
-const { PasswordAuthStrategy } = require('@keystonejs/auth-password');
+const { Keystone } = require('@ksjs/keystone');
+const { PasswordAuthStrategy } = require('@ksjs/auth-password');
 const {
   File,
   Text,
@@ -8,11 +8,11 @@ const {
   Select,
   Password,
   CloudinaryImage,
-} = require('@keystonejs/fields');
-const { CloudinaryAdapter, LocalFileAdapter } = require('@keystonejs/file-adapters');
-const { GraphQLApp } = require('@keystonejs/app-graphql');
-const { AdminUIApp } = require('@keystonejs/app-admin-ui');
-const { StaticApp } = require('@keystonejs/app-static');
+} = require('@ksjs/fields');
+const { CloudinaryAdapter, LocalFileAdapter } = require('@ksjs/file-adapters');
+const { GraphQLApp } = require('@ksjs/app-graphql');
+const { AdminUIApp } = require('@ksjs/app-admin-ui');
+const { StaticApp } = require('@ksjs/app-static');
 
 const { staticRoute, staticPath, cloudinary, cookieSecret } = require('./config');
 
@@ -20,7 +20,7 @@ const { DISABLE_AUTH } = process.env;
 const LOCAL_FILE_SRC = `${staticPath}/avatars`;
 const LOCAL_FILE_ROUTE = `${staticRoute}/avatars`;
 
-const { MongooseAdapter } = require('@keystonejs/adapter-mongoose');
+const { MongooseAdapter } = require('@ksjs/adapter-mongoose');
 
 const keystone = new Keystone({
   name: 'Cypress Test for Social Login',

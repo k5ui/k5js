@@ -1,4 +1,4 @@
-import { matchFilter } from '@keystonejs/test-utils';
+import { matchFilter } from '@ksjs/test-utils';
 import Text from './';
 
 const fieldType = 'Text';

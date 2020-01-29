@@ -1,5 +1,5 @@
-import { importView } from '@keystonejs/build-field-types';
-import { Text } from '@keystonejs/fields';
+import { importView } from '@ksjs/build-field-types';
+import { Text } from '@ksjs/fields';
 import {
   Content as ContentType,
   MongoContentInterface,

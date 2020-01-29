@@ -1,10 +1,10 @@
-const { Text } = require('@keystonejs/fields');
+const { Text } = require('@ksjs/fields');
 const {
   multiAdapterRunners,
   setupServer,
   graphqlRequest,
   networkedGraphqlRequest,
-} = require('@keystonejs/test-utils');
+} = require('@ksjs/test-utils');
 const cuid = require('cuid');
 
 const falseFn = () => false;

@@ -1,6 +1,6 @@
 import getByPath from 'lodash.get';
-import { Relationship, Text } from '@keystonejs/fields';
-import { flatMap, unique, objMerge } from '@keystonejs/utils';
+import { Relationship, Text } from '@ksjs/fields';
+import { flatMap, unique, objMerge } from '@ksjs/utils';
 import { paragraph } from './blocks';
 import { walkSlateNode } from './slate-walker';
 
