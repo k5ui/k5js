@@ -1,7 +1,7 @@
 {
   "name": "@ksjs/app-graphql-playground",
   "description": "KeystoneJS GraphQL Playground App.",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "author": "The KeystoneJS Development Team",
   "license": "MIT",
   "engines": {

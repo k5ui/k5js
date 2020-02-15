@@ -1,7 +1,7 @@
 {
   "name": "@ksjs/test-utils",
   "description": "Common utilities used while testing @keystonejs/* packages.",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "author": "The KeystoneJS Development Team",
   "license": "MIT",
   "engines": {
