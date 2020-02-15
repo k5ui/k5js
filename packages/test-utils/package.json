@@ -8,10 +8,10 @@
     "node": ">=8.4.0"
   },
   "dependencies": {
-    "@ksjs/adapter-knex": "^1.0.0",
-    "@ksjs/adapter-mongoose": "^1.0.0",
-    "@ksjs/app-graphql": "^1.0.0",
-    "@ksjs/keystone": "^1.0.0",
+    "@ksjs/adapter-knex": "^0.1.0",
+    "@ksjs/adapter-mongoose": "^0.1.0",
+    "@ksjs/app-graphql": "^0.1.0",
+    "@ksjs/keystone": "^0.1.0",
     "express": "^4.17.1",
     "mongodb-memory-server": "^6.1.1",
     "p-finally": "^2.0.1",

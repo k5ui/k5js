@@ -16,10 +16,10 @@
     "start": "cross-env NODE_ENV=production keystone start"
   },
   "dependencies": {
-    "@ksjs/adapter-mongoose": "^1.0.0",
-    "@ksjs/app-admin-ui": "^1.0.0",
-    "@ksjs/app-graphql": "^1.0.0",
-    "@ksjs/keystone": "^1.0.0",
+    "@ksjs/adapter-mongoose": "^0.1.0",
+    "@ksjs/app-admin-ui": "^0.1.0",
+    "@ksjs/app-graphql": "^0.1.0",
+    "@ksjs/keystone": "^0.1.0",
     "cross-env": "^5.2.0"
   }
 }

@@ -13,10 +13,10 @@
   "dependencies": {
     "@babel/runtime": "^7.7.7",
     "@ksjs-ui/input": "^0.1.0",
-    "@ksjs/adapter-knex": "^1.0.0",
-    "@ksjs/adapter-mongoose": "^1.0.0",
-    "@ksjs/build-field-types": "^1.0.0",
-    "@ksjs/fields": "^1.0.0",
+    "@ksjs/adapter-knex": "^0.1.0",
+    "@ksjs/adapter-mongoose": "^0.1.0",
+    "@ksjs/build-field-types": "^0.1.0",
+    "@ksjs/fields": "^0.1.0",
     "react": "^16.12.0"
   },
   "module": "dist/fields-mongoid.esm.js"

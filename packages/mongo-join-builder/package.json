@@ -8,7 +8,7 @@
     "node": ">=8.4.0"
   },
   "dependencies": {
-    "@ksjs/utils": "^1.0.0",
+    "@ksjs/utils": "^0.1.0",
     "cuid": "^2.1.6"
   },
   "devDependencies": {

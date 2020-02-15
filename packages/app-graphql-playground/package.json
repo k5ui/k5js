@@ -10,9 +10,9 @@
   "dependencies": {
     "@apollographql/graphql-playground-html": "^1.6.24",
     "@apollographql/graphql-playground-react": "^1.7.31",
-    "@ksjs/logger": "^1.0.0",
-    "@ksjs/session": "^1.0.0",
-    "@ksjs/utils": "^1.0.0",
+    "@ksjs/logger": "^0.1.0",
+    "@ksjs/session": "^0.1.0",
+    "@ksjs/utils": "^0.1.0",
     "body-parser": "^1.18.2",
     "chalk": "^2.4.2",
     "falsey": "^1.0.0",

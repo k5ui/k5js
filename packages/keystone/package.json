@@ -11,11 +11,11 @@
     "keystone": "bin/cli.js"
   },
   "dependencies": {
-    "@ksjs/access-control": "^1.0.0",
-    "@ksjs/fields": "^1.0.0",
-    "@ksjs/logger": "^1.0.0",
-    "@ksjs/session": "^1.0.0",
-    "@ksjs/utils": "^1.0.0",
+    "@ksjs/access-control": "^0.1.0",
+    "@ksjs/fields": "^0.1.0",
+    "@ksjs/logger": "^0.1.0",
+    "@ksjs/session": "^0.1.0",
+    "@ksjs/utils": "^0.1.0",
     "apollo-errors": "^1.9.0",
     "arg": "^4.1.1",
     "chalk": "^2.4.2",

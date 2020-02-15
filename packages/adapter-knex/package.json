@@ -8,10 +8,10 @@
     "node": ">=8.4.0"
   },
   "dependencies": {
-    "@ksjs/fields-auto-increment": "^1.0.0",
-    "@ksjs/keystone": "^1.0.0",
-    "@ksjs/logger": "^1.0.0",
-    "@ksjs/utils": "^1.0.0",
+    "@ksjs/fields-auto-increment": "^0.1.0",
+    "@ksjs/keystone": "^0.1.0",
+    "@ksjs/logger": "^0.1.0",
+    "@ksjs/utils": "^0.1.0",
     "@sindresorhus/slugify": "^0.6.0",
     "knex": "^0.20.6",
     "p-settle": "^3.1.0",

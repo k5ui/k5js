@@ -8,11 +8,11 @@
     "node": ">=8.4.0"
   },
   "dependencies": {
-    "@ksjs/fields-mongoid": "^1.0.0",
-    "@ksjs/keystone": "^1.0.0",
-    "@ksjs/logger": "^1.0.0",
-    "@ksjs/mongo-join-builder": "^1.0.0",
-    "@ksjs/utils": "^1.0.0",
+    "@ksjs/fields-mongoid": "^0.1.0",
+    "@ksjs/keystone": "^0.1.0",
+    "@ksjs/logger": "^0.1.0",
+    "@ksjs/mongo-join-builder": "^0.1.0",
+    "@ksjs/utils": "^0.1.0",
     "@sindresorhus/slugify": "^0.6.0",
     "mongoose": "^5.8.4",
     "p-settle": "^3.1.0",

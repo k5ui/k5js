@@ -16,12 +16,12 @@
   "repository": "https://github.com/keystonejs/keystone.git",
   "homepage": "https://github.com/keystonejs/keystone",
   "dependencies": {
-    "@ksjs/adapter-mongoose": "^1.0.0",
-    "@ksjs/app-admin-ui": "^1.0.0",
-    "@ksjs/app-graphql": "^1.0.0",
-    "@ksjs/app-nuxt": "^1.0.0",
-    "@ksjs/fields": "^1.0.0",
-    "@ksjs/keystone": "^1.0.0",
+    "@ksjs/adapter-mongoose": "^0.1.0",
+    "@ksjs/app-admin-ui": "^0.1.0",
+    "@ksjs/app-graphql": "^0.1.0",
+    "@ksjs/app-nuxt": "^0.1.0",
+    "@ksjs/fields": "^0.1.0",
+    "@ksjs/keystone": "^0.1.0",
     "cross-env": "^5.2.0",
     "express": "^4.17.1",
     "nuxt": "^2.9.2"
