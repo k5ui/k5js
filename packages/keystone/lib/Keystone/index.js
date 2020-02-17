@@ -44,6 +44,10 @@ const debugGraphQLSchemas = () => !!process.env.DEBUG_GRAPHQL_SCHEMAS;
 const graphqlLogger = logger('graphql');
 
 module.exports = class Keystone {
+  /**
+   *Creates an instance of Keystone.
+   * @param {import('../..').KeystoneOptions} KeystoneOptions Options
+   */
   constructor({
     defaultAccess,
     adapters,
@@ -66,6 +70,7 @@ module.exports = class Keystone {
     this.name = name;
     this.defaultAccess = { list: true, field: true, custom: true, ...defaultAccess };
     this.auth = {};
+    /** @type any[] */
     this.lists = {};
     this.listsArray = [];
     this.getListByKey = key => this.lists[key];
@@ -108,6 +113,13 @@ module.exports = class Keystone {
     // Placeholder until keystone.prepare() is run during which this function
     // will be replaced with one that can actually make queries (assuming the
     // graphql app is setup, which is checked for elsewhere).
+    /**
+     * executes query
+     * @template Output
+     * @param {string}  query
+     * @param {{ variables: any; context: any }}  [config]
+     * @returns {Output}
+    */
     this.executeQuery = () => {
       throw new Error(
         'Attempted to execute keystone.query() before keystone.prepare() has completed.'
@@ -253,6 +265,12 @@ module.exports = class Keystone {
     };
   }
 
+  /**
+   *
+   *
+   * @param {*} options
+   * @returns
+   */
   createAuthStrategy(options) {
     const { type: StrategyType, list: listKey, config } = options;
     const { authType } = StrategyType;
@@ -265,6 +283,14 @@ module.exports = class Keystone {
     return strategy;
   }
 
+  /**
+   * @summary Creates a List
+   *
+   * @param {string} key
+   * @param {ListSchema} config
+   * @param {{ isAuxList?: Boolean }} [options]
+   * @returns
+   */
   createList(key, config, { isAuxList = false } = {}) {
     const { getListByKey, adapters } = this;
     const adapterName = config.adapterName || this.defaultAdapter;
@@ -353,7 +379,7 @@ module.exports = class Keystone {
   }
 
   /**
-   * @return Promise<null>
+   * @return {Promise<void>}
    */
   connect() {
     const { adapters, name } = this;
@@ -365,7 +391,7 @@ module.exports = class Keystone {
   }
 
   /**
-   * @return Promise<null>
+   * @returns {Promise<void>}
    */
   disconnect() {
     return resolveAllKeys(
@@ -686,6 +712,12 @@ module.exports = class Keystone {
     return this.lists[listKey].adapter.create(itemData);
   }
 
+  /**
+   * @template ItemType string
+   *
+   * @param {{ [key in ListNames]: ItemType[] }} itemsToCreate
+   * @returns {Promise<void}
+   */
   async createItems(itemsToCreate) {
     // 1. Split it apart
     const { relationships, data } = unmergeRelationships(this.lists, itemsToCreate);
@@ -716,6 +748,18 @@ module.exports = class Keystone {
     return mergeRelationships(createdItems, createdRelationships);
   }
 
+  /**
+   *
+   *
+   * @param {{
+   *     dev?: boolean,
+   *     apps?: import('../..').BaseApp[],
+   *     distDir?: string,
+   *     pinoOptions?: any,
+   *     cors?: { origin: boolean, credentials: boolean },
+   *   }} prepareOptions
+   * @returns {Promise<import('../..').KeystonePrepareResult>}
+   */
   async prepare({
     dev = false,
     apps = [],
