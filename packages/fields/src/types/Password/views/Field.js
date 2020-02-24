@@ -28,10 +28,12 @@ const PasswordField = ({
   const [inputConfirm, setInputConfirm] = useState('');
 
   useEffect(() => {
-    onChange({
-      inputPassword,
-      inputConfirm,
-    });
+    if (isEditing) {
+      onChange({
+        inputPassword,
+        inputConfirm,
+      });
+    }
   }, [inputPassword, inputConfirm]);
 
   useEffect(() => {
@@ -46,6 +48,17 @@ const PasswordField = ({
 
   const toggleMode = () => {
     setShowInputValue(!showInputValue);
+  };
+
+  const renderErrors = src => {
+    const appearance = src === errors ? 'danger' : 'warning';
+
+    return src.map(({ message, data }) => (
+      <Alert appearance={appearance} key={message}>
+        {message}
+        {data ? ` - ${JSON.stringify(data)}` : null}
+      </Alert>
+    ));
   };
 
   const value = serverValue || '';
@@ -104,23 +117,8 @@ const PasswordField = ({
         )}
       </FieldInput>
 
-      {errors.length
-        ? errors.map(({ message, data }) => (
-            <Alert appearance="danger" key={message}>
-              {message}
-              {data ? ` - ${JSON.stringify(data)}` : null}
-            </Alert>
-          ))
-        : null}
-
-      {warnings.length
-        ? warnings.map(({ message, data }) => (
-            <Alert appearance="warning" key={message}>
-              {message}
-              {data ? ` - ${JSON.stringify(data)}` : null}
-            </Alert>
-          ))
-        : null}
+      {renderErrors(errors)}
+      {renderErrors(warnings)}
     </FieldContainer>
   );
 };
