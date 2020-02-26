@@ -36,7 +36,7 @@ const HeaderInset = props => (
 );
 
 export function ListLayout(props) {
-  const { adminMeta, items, itemCount, queryErrors, routeProps, query } = props;
+  const { adminMeta, items, itemCount, queryErrors, routeProps, query, listView = '' } = props;
   const measureElementRef = useRef();
   const { list, openCreateItemModal } = useList();
   const { urlState } = useListUrlState(list.key);
@@ -52,11 +52,11 @@ export function ListLayout(props) {
   // Mount with Persisted Search
   // ------------------------------
   useEffect(() => {
-    const maybePersistedSearch = list.getPersistedSearch();
+    const maybePersistedSearch = list.getPersistedSearch(listView);
 
     if (location.search) {
       if (location.search !== maybePersistedSearch) {
-        list.setPersistedSearch(location.search);
+        list.setPersistedSearch(location.search, listView);
       }
     } else if (maybePersistedSearch) {
       history.replace({
@@ -256,7 +256,7 @@ export function ListLayout(props) {
 }
 
 export function List(props) {
-  const { list, query, routeProps } = props;
+  const { list, query, routeProps, listView = '' } = props;
 
   // get item data
   const items = query.data && query.data[list.gqlNames.listQueryName];
@@ -271,11 +271,11 @@ export function List(props) {
   // Mount with Persisted Search
   // ------------------------------
   useEffect(() => {
-    const maybePersistedSearch = list.getPersistedSearch();
+    const maybePersistedSearch = list.getPersistedSearch(listView);
 
     if (location.search) {
       if (location.search !== maybePersistedSearch) {
-        list.setPersistedSearch(location.search);
+        list.setPersistedSearch(location.search, listView);
       }
     } else if (maybePersistedSearch) {
       history.replace({
