@@ -36,12 +36,12 @@ const HeaderInset = props => (
 );
 
 export function ListLayout(props) {
-  const { adminMeta, items, itemCount, queryErrors, routeProps, query, listView = '' } = props;
+  const { adminMeta, items, itemCount, queryErrors, routeProps, query, listView } = props;
   const measureElementRef = useRef();
   const { list, openCreateItemModal } = useList();
   const { urlState } = useListUrlState(list.key);
-  const { filters } = useListFilter(list.key);
-  const [sortBy, handleSortChange] = useListSort(list.key);
+  const { filters } = useListFilter(list.key, listView);
+  const [sortBy, handleSortChange] = useListSort(list.key, listView);
 
   const { adminPath } = adminMeta;
   const { history, location } = routeProps;
@@ -128,7 +128,7 @@ export function ListLayout(props) {
                 }}
               </Render>
             </Suspense>
-            <ActiveFilters list={list} />
+            <ActiveFilters list={list} listView={listView} />
           </div>
 
           <ManageToolbar isVisible css={{ marginLeft: 2 }}>
@@ -165,7 +165,7 @@ export function ListLayout(props) {
                   {sortBy ? (
                     <Fragment>
                       <span css={{ paddingLeft: '0.5ex' }}>sorted by</span>
-                      <SortPopout listKey={list.key} />
+                      <SortPopout listKey={list.key} listView={listView} />
                     </Fragment>
                   ) : (
                     ''
@@ -173,6 +173,7 @@ export function ListLayout(props) {
                   <span css={{ paddingLeft: '0.5ex' }}>with</span>
                   <ColumnPopout
                     listKey={list.key}
+                    listView={listView}
                     target={handlers => (
                       <Button
                         variant="subtle"
@@ -196,7 +197,13 @@ export function ListLayout(props) {
                             .filter(field => field.path !== '_label_')
                             .map(field => () => field.initCellView())
                         );
-                        return <Pagination listKey={list.key} isLoading={query.loading} />;
+                        return (
+                          <Pagination
+                            listKey={list.key}
+                            listView={listView}
+                            isLoading={query.loading}
+                          />
+                        );
                       }}
                     </Render>
                   </Suspense>
@@ -216,6 +223,7 @@ export function ListLayout(props) {
           columnControl={
             <ColumnPopout
               listKey={list.key}
+              listView={listView}
               target={handlers => (
                 <Tooltip placement="top" content="Columns">
                   {ref => (
@@ -256,7 +264,7 @@ export function ListLayout(props) {
 }
 
 export function List(props) {
-  const { list, query, routeProps, listView = '' } = props;
+  const { list, query, routeProps, listView } = props;
 
   // get item data
   const items = query.data && query.data[list.gqlNames.listQueryName];
